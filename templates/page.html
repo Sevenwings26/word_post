@@ -1,6 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>{{ post.topic }}</h1>
-<p>{{ post.content }}</p>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.topic }}</h5>
+      <h6 class="">{{ post.preacher }}</h6>
+      <p class="card-text">{{ post.content }}</p>
+      <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

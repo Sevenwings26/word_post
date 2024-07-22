@@ -1,50 +1,46 @@
-*{
-    border: none;
-    margin: none;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.brand {
+    width: 120px;
+    margin-right: 1rem;
 }
 
-nav {
-    display: flex;
-    background-color: rgb(70, 68, 65);
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 0 2rem;
+.brand .logo-style {
+    width: 100%;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+.container_{
+    border-left: 1px solid black;
 }
 
-nav ul li {
-    margin-left: 2rem;
+.no-border {
+  border: none;
 }
-
-nav ul li a{
-    text-decoration: none;
-    color:white;
-}
-
-nav ul li a:hover{
-    text-decoration: underline;
-}
-
-.list{
-    list-style: none;
-}
-
-.list a {
-    text-decoration: none;
-}
-
 
 footer {
-    background-color: rgb(70, 68, 65);
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
 }
 
-footer p {
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer a {
     color: white;
+}
+
+footer a:hover {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+footer .list-inline-item a {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+footer .list-inline-item a:hover {
+    color: #adb5bd;
 }
