@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %} {% for post in posts %} This is
+the index page
+<br />
+
+<article>
+  <h2><a href="{% url 'post' id=post.id %}">{{ post.topic }}</a></h2>
+  <p>{{ post.content|slice:":200" }}...</p>
+</article>
+
+{% endfor %} {% endblock %}

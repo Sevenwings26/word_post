@@ -12,7 +12,7 @@ class Preacher_info(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     bio = models.TextField(blank=True, null=True)
-    profile_picture = models.ImageField(upload_to='preachers/', blank=True, null=True)
+    profile_picture = models.ImageField(blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -30,8 +30,10 @@ class Sermon(models.Model):
     topic = models.CharField(max_length=120)
     preacher = models.ForeignKey(Preacher_info, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    date_posted = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(default='default-slug')
     content = models.TextField()
+    image = models.ImageField(default='default.png', blank=True)
+    date_posted = models.DateTimeField(auto_now_add=True)
     # transcript
     # duration
 
