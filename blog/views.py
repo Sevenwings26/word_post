@@ -14,16 +14,15 @@ def home_page(request):
 
 def blogsPage(request):
     posts = Sermon.objects.all()
+    if not request.user.is_authenticated:
+        return redirect("login")
     return render(request, 'allblogs.html', {"posts":posts}) 
+
 
 def page(request, id):
     post = get_object_or_404(Sermon, id=id)
     return render(request, 'page.html', {'post': post})
 
-
-# def post_page(request, slug):
-#     return HttpResponse(slug)
-#     # return render(request, 'pages/post_detail.html' )
 
 def register(request):
     if request.method == "POST":
