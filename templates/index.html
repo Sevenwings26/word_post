@@ -1,16 +1,11 @@
-{% extends 'base.html' %} {% block content %} {% for post in posts %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container container_">
-  <div class="card no-border">
-    <!-- <h5 class="card-header">{{ post.topic }}</h5> -->
-    <div class="card-body border-none">
-      <h3 class="card-title">{{ post.topic }}</h3>
-      <h6 class="">{{ post.preacher }}</h6>
-      <p class="card-text">{{ post.content|slice:":200" }}...</p>
-      <a href="{% url 'post' id=post.id %}" class="btn btn-primary">Read</a>
-    </div>
-    <hr />
-  </div>
+  <br /><br /><br />
+  <h1>Welcome to your Change...</h1>
+  <p>You are about to experience a shift!!!</p>
+
+  <br /><br /><br />
 </div>
 
-{% endfor %} {% endblock %}
+{% endblock %}
